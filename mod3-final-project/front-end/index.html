@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <meta charset="utf-8">
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <form id="input-form" action="index.html" method="post">
+      Convert: <input type="text" id="currency-amount" placeholder="Enter Amount">
+      <select id='conversion-currency-one' name="Currency to Convert"></select>
+      To: <select id='conversion-currency-two' name="Currency to Convert"></select>
+      <input type="submit" name="submit" value="Convert Currency">
+    </form>
+    <div id='currencies' class="currencies">
+    </div>
+    <script src="currency-api.js">
+    </script>
+    <script src="app.js">
+    </script>
+    <script src="index.js">
+    </script>
+  </body>
+</html>
