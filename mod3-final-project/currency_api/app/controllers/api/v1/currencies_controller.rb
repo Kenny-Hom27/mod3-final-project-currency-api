@@ -10,6 +10,12 @@ class Api::V1::CurrenciesController < ApplicationController
     render json: @currency
   end
 
+  def destroy
+    @currency = Currency.find(params[:id])
+    @currency.destroy
+
+  end
+
   def update
     @currency = Currency.find(params[:id])
 

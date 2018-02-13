@@ -1216,3 +1216,2566 @@ No serializer found for resource: #<Currency id: 1, original_currency: "ARS", co
 Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-02-13 15:07:59 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/matthewwelch/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/matthewwelch/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 15:08:05 -0500
+Processing by Api::V1::CurrenciesController#index as HTML
+  [1m[36mCurrency Load (0.1ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "ARS", conversion_currency: "BHD", amount_entered: 1232, created_at: "2018-02-13 19:03:02", updated_at: "2018-02-13 19:03:02">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.57ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 15:08:33 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "ARS", conversion_currency: "BHD", amount_entered: 1232, created_at: "2018-02-13 19:03:02", updated_at: "2018-02-13 19:03:02">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.25ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 15:09:12 -0500
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 15:09:18 -0500
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 15:09:21 -0500
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCurrencies (20180212210506)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "currencies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "original_currency" varchar, "conversion_currency" varchar, "amount_entered" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180212210506"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-02-13 20:09:34.157463"], ["updated_at", "2018-02-13 20:09:34.157463"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 15:09:44 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.1ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 15:09:47 -0500
+Processing by Api::V1::CurrenciesController#index as HTML
+  [1m[36mCurrency Load (0.1ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 15:09:54 -0500
+Processing by Api::V1::CurrenciesController#create as */*
+  Parameters: {"original_currency"=>"AED", "conversion_currency"=>"BZD", "amount_entered"=>"118", "currency"=>{"original_currency"=>"AED", "conversion_currency"=>"BZD", "amount_entered"=>"118"}}
+Unpermitted parameter: :currency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "currencies" ("original_currency", "conversion_currency", "amount_entered", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_currency", "AED"], ["conversion_currency", "BZD"], ["amount_entered", 118], ["created_at", "2018-02-13 20:09:54.937835"], ["updated_at", "2018-02-13 20:09:54.937835"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Currency (0.31ms)
+Completed 200 OK in 16ms (Views: 5.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 15:09:57 -0500
+Processing by Api::V1::CurrenciesController#index as HTML
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.22ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 15:09:59 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.24ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:10:44 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.36ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:17:47 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.32ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:17:55 -0500
+Processing by Api::V1::CurrenciesController#create as */*
+  Parameters: {"original_currency"=>"BAM", "conversion_currency"=>"AMD", "amount_entered"=>"14032", "currency"=>{"original_currency"=>"BAM", "conversion_currency"=>"AMD", "amount_entered"=>"14032"}}
+Unpermitted parameter: :currency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "currencies" ("original_currency", "conversion_currency", "amount_entered", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_currency", "BAM"], ["conversion_currency", "AMD"], ["amount_entered", 14032], ["created_at", "2018-02-13 21:17:55.956451"], ["updated_at", "2018-02-13 21:17:55.956451"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Currency (0.24ms)
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:18:11 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.68ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:18:12 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.75ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:19:05 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.65ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:19:09 -0500
+Processing by Api::V1::CurrenciesController#create as */*
+  Parameters: {"original_currency"=>"AED", "conversion_currency"=>"BAM", "amount_entered"=>"1231", "currency"=>{"original_currency"=>"AED", "conversion_currency"=>"BAM", "amount_entered"=>"1231"}}
+Unpermitted parameter: :currency
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "currencies" ("original_currency", "conversion_currency", "amount_entered", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_currency", "AED"], ["conversion_currency", "BAM"], ["amount_entered", 1231], ["created_at", "2018-02-13 21:19:09.986032"], ["updated_at", "2018-02-13 21:19:09.986032"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Currency (0.29ms)
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:20:06 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.74ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:20:10 -0500
+Processing by Api::V1::CurrenciesController#create as */*
+  Parameters: {"original_currency"=>"AED", "conversion_currency"=>"AED", "amount_entered"=>"1256126", "currency"=>{"original_currency"=>"AED", "conversion_currency"=>"AED", "amount_entered"=>"1256126"}}
+Unpermitted parameter: :currency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "currencies" ("original_currency", "conversion_currency", "amount_entered", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_currency", "AED"], ["conversion_currency", "AED"], ["amount_entered", 1256126], ["created_at", "2018-02-13 21:20:10.323961"], ["updated_at", "2018-02-13 21:20:10.323961"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Currency (0.22ms)
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:20:10 -0500
+Processing by Api::V1::CurrenciesController#create as */*
+  Parameters: {"original_currency"=>"AED", "conversion_currency"=>"AED", "amount_entered"=>"1256126", "currency"=>{"original_currency"=>"AED", "conversion_currency"=>"AED", "amount_entered"=>"1256126"}}
+Unpermitted parameter: :currency
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "currencies" ("original_currency", "conversion_currency", "amount_entered", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_currency", "AED"], ["conversion_currency", "AED"], ["amount_entered", 1256126], ["created_at", "2018-02-13 21:20:10.436889"], ["updated_at", "2018-02-13 21:20:10.436889"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Currency (0.3ms)
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:20:50 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.09ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:20:54 -0500
+Processing by Api::V1::CurrenciesController#create as */*
+  Parameters: {"original_currency"=>"BHD", "conversion_currency"=>"AED", "amount_entered"=>"125125125", "currency"=>{"original_currency"=>"BHD", "conversion_currency"=>"AED", "amount_entered"=>"125125125"}}
+Unpermitted parameter: :currency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "currencies" ("original_currency", "conversion_currency", "amount_entered", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_currency", "BHD"], ["conversion_currency", "AED"], ["amount_entered", 125125125], ["created_at", "2018-02-13 21:20:54.116834"], ["updated_at", "2018-02-13 21:20:54.116834"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Currency (0.26ms)
+Completed 200 OK in 11ms (Views: 0.8ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:21:04 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.16ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:21:05 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.12ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:21:11 -0500
+Processing by Api::V1::CurrenciesController#create as */*
+  Parameters: {"original_currency"=>"AED", "conversion_currency"=>"AED", "amount_entered"=>"4444", "currency"=>{"original_currency"=>"AED", "conversion_currency"=>"AED", "amount_entered"=>"4444"}}
+Unpermitted parameter: :currency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "currencies" ("original_currency", "conversion_currency", "amount_entered", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_currency", "AED"], ["conversion_currency", "AED"], ["amount_entered", 4444], ["created_at", "2018-02-13 21:21:11.260944"], ["updated_at", "2018-02-13 21:21:11.260944"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Currency (0.27ms)
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:21:14 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.36ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:21:22 -0500
+Processing by Api::V1::CurrenciesController#create as */*
+  Parameters: {"original_currency"=>"AED", "conversion_currency"=>"AED", "amount_entered"=>"33333", "currency"=>{"original_currency"=>"AED", "conversion_currency"=>"AED", "amount_entered"=>"33333"}}
+Unpermitted parameter: :currency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "currencies" ("original_currency", "conversion_currency", "amount_entered", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_currency", "AED"], ["conversion_currency", "AED"], ["amount_entered", 33333], ["created_at", "2018-02-13 21:21:22.984755"], ["updated_at", "2018-02-13 21:21:22.984755"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Currency (0.44ms)
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:21:28 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.68ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:23:18 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.61ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:23:29 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.33ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:28 -0500
+Processing by Api::V1::CurrenciesController#index as HTML
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.38ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:30 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.01ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:32 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.28ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:33 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.25ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:33 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.29ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:34 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.42ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:34 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.19ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:35 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.42ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:35 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.82ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:35 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.5ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.26ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:35 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.62ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:36 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.66ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:36 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.81ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:36 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.98ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:37 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.94ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:37 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.4ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:37 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (11.13ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:37 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.77ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:38 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.45ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:38 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.32ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:38 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.2ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:39 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.07ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:39 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.69ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:39 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.31ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:40 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.38ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:40 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.87ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:40 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.91ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:41 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.42ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:41 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.77ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:41 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.52ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:41 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.34ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:24:42 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.78ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:27:32 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.29ms)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:27:59 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.09ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:29:05 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.52ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/api/v1/currencies/1" for 127.0.0.1 at 2018-02-13 16:29:07 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/2" for 127.0.0.1 at 2018-02-13 16:29:07 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/3" for 127.0.0.1 at 2018-02-13 16:29:08 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/4" for 127.0.0.1 at 2018-02-13 16:29:08 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/5" for 127.0.0.1 at 2018-02-13 16:29:08 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/6" for 127.0.0.1 at 2018-02-13 16:29:08 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/7" for 127.0.0.1 at 2018-02-13 16:29:09 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/8" for 127.0.0.1 at 2018-02-13 16:29:09 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:29:09 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.55ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/api/v1/currencies/2" for 127.0.0.1 at 2018-02-13 16:29:11 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/3" for 127.0.0.1 at 2018-02-13 16:29:12 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/4" for 127.0.0.1 at 2018-02-13 16:29:12 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/5" for 127.0.0.1 at 2018-02-13 16:29:12 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/6" for 127.0.0.1 at 2018-02-13 16:29:12 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/7" for 127.0.0.1 at 2018-02-13 16:29:12 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/1" for 127.0.0.1 at 2018-02-13 16:29:13 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/8" for 127.0.0.1 at 2018-02-13 16:29:13 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:29:14 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (3.98ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:30:09 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.02ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/api/v1/currencies/1" for 127.0.0.1 at 2018-02-13 16:30:21 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:30:27 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.99ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:30:41 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.66ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/api/v1/currencies/4" for 127.0.0.1 at 2018-02-13 16:30:43 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:31:44 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.29ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/currencies/1" for 127.0.0.1 at 2018-02-13 16:32:18 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/currencies/1" for 127.0.0.1 at 2018-02-13 16:33:09 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/1" for 127.0.0.1 at 2018-02-13 16:33:12 -0500
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:33:22 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Processing by Api::V1::CurrenciesController#index as */*
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:33:22 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.1ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+  [1m[36mCurrency Load (0.1ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.19ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.25ms)
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 0.9ms)
+
+
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/api/v1/currencies/1" for 127.0.0.1 at 2018-02-13 16:33:41 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:33:41 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.16ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/api/v1/currencies/1" for 127.0.0.1 at 2018-02-13 16:33:43 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/2" for 127.0.0.1 at 2018-02-13 16:33:44 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/3" for 127.0.0.1 at 2018-02-13 16:33:44 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/4" for 127.0.0.1 at 2018-02-13 16:33:45 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/5" for 127.0.0.1 at 2018-02-13 16:33:45 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/6" for 127.0.0.1 at 2018-02-13 16:33:45 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/7" for 127.0.0.1 at 2018-02-13 16:33:45 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/8" for 127.0.0.1 at 2018-02-13 16:33:46 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:35:33 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.61ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:35:44 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.64ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies/1" for 127.0.0.1 at 2018-02-13 16:36:07 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/1" for 127.0.0.1 at 2018-02-13 16:36:41 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/api/v1/currencies/1" for 127.0.0.1 at 2018-02-13 16:37:33 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:37:33 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (4.72ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/api/v1/currencies/1" for 127.0.0.1 at 2018-02-13 16:37:41 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:38:18 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.2ms)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/api/v1/currencies/2" for 127.0.0.1 at 2018-02-13 16:38:21 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for Api::V1::CurrenciesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:38:48 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 1, original_currency: "AED", conversion_currency: "BZD", amount_entered: 118, created_at: "2018-02-13 20:09:54", updated_at: "2018-02-13 20:09:54">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (1.2ms)
+Completed 200 OK in 23ms (Views: 19.4ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/api/v1/currencies/1" for 127.0.0.1 at 2018-02-13 16:38:50 -0500
+Processing by Api::V1::CurrenciesController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT  "currencies".* FROM "currencies" WHERE "currencies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "currencies" WHERE "currencies"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 14ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:39:08 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 2, original_currency: "BAM", conversion_currency: "AMD", amount_entered: 14032, created_at: "2018-02-13 21:17:55", updated_at: "2018-02-13 21:17:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.09ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/api/v1/currencies/2" for 127.0.0.1 at 2018-02-13 16:39:10 -0500
+Processing by Api::V1::CurrenciesController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mCurrency Load (0.1ms)[0m  [1m[34mSELECT  "currencies".* FROM "currencies" WHERE "currencies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "currencies" WHERE "currencies"."id" = ?[0m  [["id", 2]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 9ms (ActiveRecord: 7.3ms)
+
+
+Started DELETE "/api/v1/currencies/3" for 127.0.0.1 at 2018-02-13 16:39:11 -0500
+Processing by Api::V1::CurrenciesController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT  "currencies".* FROM "currencies" WHERE "currencies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "currencies" WHERE "currencies"."id" = ?[0m  [["id", 3]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 9ms (ActiveRecord: 7.5ms)
+
+
+Started DELETE "/api/v1/currencies/4" for 127.0.0.1 at 2018-02-13 16:39:12 -0500
+Processing by Api::V1::CurrenciesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT  "currencies".* FROM "currencies" WHERE "currencies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "currencies" WHERE "currencies"."id" = ?[0m  [["id", 4]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 10ms (ActiveRecord: 8.0ms)
+
+
+Started DELETE "/api/v1/currencies/5" for 127.0.0.1 at 2018-02-13 16:39:12 -0500
+Processing by Api::V1::CurrenciesController#destroy as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT  "currencies".* FROM "currencies" WHERE "currencies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "currencies" WHERE "currencies"."id" = ?[0m  [["id", 5]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 9ms (ActiveRecord: 7.6ms)
+
+
+Started DELETE "/api/v1/currencies/6" for 127.0.0.1 at 2018-02-13 16:39:12 -0500
+Processing by Api::V1::CurrenciesController#destroy as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT  "currencies".* FROM "currencies" WHERE "currencies"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "currencies" WHERE "currencies"."id" = ?[0m  [["id", 6]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 10ms (ActiveRecord: 7.9ms)
+
+
+Started DELETE "/api/v1/currencies/7" for 127.0.0.1 at 2018-02-13 16:39:12 -0500
+Processing by Api::V1::CurrenciesController#destroy as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT  "currencies".* FROM "currencies" WHERE "currencies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "currencies" WHERE "currencies"."id" = ?[0m  [["id", 7]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 9ms (ActiveRecord: 7.5ms)
+
+
+Started DELETE "/api/v1/currencies/8" for 127.0.0.1 at 2018-02-13 16:39:13 -0500
+Processing by Api::V1::CurrenciesController#destroy as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mCurrency Load (0.1ms)[0m  [1m[34mSELECT  "currencies".* FROM "currencies" WHERE "currencies"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "currencies" WHERE "currencies"."id" = ?[0m  [["id", 8]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 9ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:39:14 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:39:15 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:42:41 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.05ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:42:57 -0500
+Processing by Api::V1::CurrenciesController#create as */*
+  Parameters: {"original_currency"=>"BOB", "conversion_currency"=>"JMD", "amount_entered"=>"1000", "currency"=>{"original_currency"=>"BOB", "conversion_currency"=>"JMD", "amount_entered"=>"1000"}}
+Unpermitted parameter: :currency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "currencies" ("original_currency", "conversion_currency", "amount_entered", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_currency", "BOB"], ["conversion_currency", "JMD"], ["amount_entered", 1000], ["created_at", "2018-02-13 21:42:57.565402"], ["updated_at", "2018-02-13 21:42:57.565402"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Currency (0.23ms)
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:43:24 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 9, original_currency: "BOB", conversion_currency: "JMD", amount_entered: 1000, created_at: "2018-02-13 21:42:57", updated_at: "2018-02-13 21:42:57">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.24ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:43:25 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 9, original_currency: "BOB", conversion_currency: "JMD", amount_entered: 1000, created_at: "2018-02-13 21:42:57", updated_at: "2018-02-13 21:42:57">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.27ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:43:25 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 9, original_currency: "BOB", conversion_currency: "JMD", amount_entered: 1000, created_at: "2018-02-13 21:42:57", updated_at: "2018-02-13 21:42:57">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.21ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:43:25 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 9, original_currency: "BOB", conversion_currency: "JMD", amount_entered: 1000, created_at: "2018-02-13 21:42:57", updated_at: "2018-02-13 21:42:57">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.19ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/api/v1/currencies/9" for 127.0.0.1 at 2018-02-13 16:43:26 -0500
+Processing by Api::V1::CurrenciesController#destroy as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mCurrency Load (0.1ms)[0m  [1m[34mSELECT  "currencies".* FROM "currencies" WHERE "currencies"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "currencies" WHERE "currencies"."id" = ?[0m  [["id", 9]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 9ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:43:27 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:43:27 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:43:28 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:43:28 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:47:12 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:49:42 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:49:42 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:49:47 -0500
+Processing by Api::V1::CurrenciesController#create as */*
+  Parameters: {"original_currency"=>"AED", "conversion_currency"=>"BHD", "amount_entered"=>"1254", "currency"=>{"original_currency"=>"AED", "conversion_currency"=>"BHD", "amount_entered"=>"1254"}}
+Unpermitted parameter: :currency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "currencies" ("original_currency", "conversion_currency", "amount_entered", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_currency", "AED"], ["conversion_currency", "BHD"], ["amount_entered", 1254], ["created_at", "2018-02-13 21:49:47.848188"], ["updated_at", "2018-02-13 21:49:47.848188"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Currency (0.23ms)
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:49:51 -0500
+Processing by Api::V1::CurrenciesController#create as */*
+  Parameters: {"original_currency"=>"AED", "conversion_currency"=>"BHD", "amount_entered"=>"129832", "currency"=>{"original_currency"=>"AED", "conversion_currency"=>"BHD", "amount_entered"=>"129832"}}
+Unpermitted parameter: :currency
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "currencies" ("original_currency", "conversion_currency", "amount_entered", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_currency", "AED"], ["conversion_currency", "BHD"], ["amount_entered", 129832], ["created_at", "2018-02-13 21:49:51.531702"], ["updated_at", "2018-02-13 21:49:51.531702"]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Currency (0.3ms)
+Completed 200 OK in 11ms (Views: 0.9ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:49:52 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 10, original_currency: "AED", conversion_currency: "BHD", amount_entered: 1254, created_at: "2018-02-13 21:49:47", updated_at: "2018-02-13 21:49:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.39ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:49:53 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 10, original_currency: "AED", conversion_currency: "BHD", amount_entered: 1254, created_at: "2018-02-13 21:49:47", updated_at: "2018-02-13 21:49:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.41ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/api/v1/currencies/10" for 127.0.0.1 at 2018-02-13 16:49:55 -0500
+Processing by Api::V1::CurrenciesController#destroy as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mCurrency Load (0.1ms)[0m  [1m[34mSELECT  "currencies".* FROM "currencies" WHERE "currencies"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "currencies" WHERE "currencies"."id" = ?[0m  [["id", 10]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 10ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:49:55 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 11, original_currency: "AED", conversion_currency: "BHD", amount_entered: 129832, created_at: "2018-02-13 21:49:51", updated_at: "2018-02-13 21:49:51">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.27ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/api/v1/currencies/11" for 127.0.0.1 at 2018-02-13 16:49:56 -0500
+Processing by Api::V1::CurrenciesController#destroy as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT  "currencies".* FROM "currencies" WHERE "currencies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "currencies" WHERE "currencies"."id" = ?[0m  [["id", 11]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 4ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-13 16:49:56 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
