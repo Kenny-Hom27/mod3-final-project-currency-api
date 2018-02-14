@@ -116,20 +116,20 @@ const currencyAPI = (function() {
                 ]
               },
               options: {
+                tooltips: {enabled: false},
+                hover: {mode: null},
                 legend: { display: false },
                 title: {
                   display: true,
                   text: 'Currency Levels'
                 }
+
               }
             })
           }
         });
 
 
-
-      console.log(currencyLabels)
-      console.log(currencyData)
 ;
     }
   };
