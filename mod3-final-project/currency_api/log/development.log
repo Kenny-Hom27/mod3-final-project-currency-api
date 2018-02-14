@@ -4210,6 +4210,7 @@ Unpermitted parameter: :currency
 Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 1.6ms)
 
 
+<<<<<<< HEAD
 Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-14 13:04:00 -0500
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by Api::V1::CurrenciesController#index as */*
@@ -4701,5 +4702,30 @@ Processing by Api::V1::CurrenciesController#index as */*
 No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
 [active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (4.61ms)
 Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.3ms)
+=======
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-14 11:18:08 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 13, original_currency: "AZN", conversion_currency: "AED", amount_entered: 12414, created_at: "2018-02-14 15:54:23", updated_at: "2018-02-14 15:54:23">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.2ms)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-14 11:19:21 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.1ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 13, original_currency: "AZN", conversion_currency: "AED", amount_entered: 12414, created_at: "2018-02-14 15:54:23", updated_at: "2018-02-14 15:54:23">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.57ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-14 11:20:03 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.1ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 13, original_currency: "AZN", conversion_currency: "AED", amount_entered: 12414, created_at: "2018-02-14 15:54:23", updated_at: "2018-02-14 15:54:23">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (0.45ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+>>>>>>> f298f0d2ffe33c06b0e228463013912d901c5334
 
 

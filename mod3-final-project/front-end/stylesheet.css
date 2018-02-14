@@ -93,6 +93,7 @@ button {
 }
 
 button:hover {
+<<<<<<< HEAD
   background: linear-gradient(to bottom right, green, yellow);
   transform: scale(1.2, 1.2);
 }
@@ -102,3 +103,11 @@ button:hover {
   opacity: 0.85;
   border-radius: 15px;
 }
+=======
+ background: linear-gradient(to bottom right, green, yellow);
+ transform: scale(1.2, 1.2);}
+
+ #bar-chart {
+   background: green;
+ }
+>>>>>>> f298f0d2ffe33c06b0e228463013912d901c5334
