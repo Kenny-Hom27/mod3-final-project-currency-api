@@ -29,7 +29,7 @@ const App = (function() {
         convertedValue.innerText =
           `${conversionValue} ${countryOne}` +
           `  -->  ` +
-          conversionValue / indexOne * indexTwo +
+          Math.round(conversionValue / indexOne * indexTwo * 100) / 100 +
           ` ${countryTwo}`;
         blockHeader.innerHTML = `${countryOne} --> ${countryTwo}`;
 

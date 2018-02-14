@@ -7,17 +7,23 @@ const currencyAPI = (function() {
         .then(res => res.json())
         .then(json => {
           for (let quote in json.quotes) {
-            let selectOne = document.getElementById("conversion-currency-one");
-            let selectTwo = document.getElementById("conversion-currency-two");
-            let optOne = document.createElement("option");
-            let optTwo = document.createElement("option");
-            optOne.innerHTML = quote.slice(3);
-            optTwo.innerHTML = quote.slice(3);
-            optOne.setAttribute("rate", json.quotes[quote]);
-            optTwo.setAttribute("rate", json.quotes[quote]);
-            selectOne.append(optOne);
-            selectTwo.append(optTwo);
-            document.getElementById("conversion-currency-one").value = "USD";
+            if (json.quotes[quote] < 3) {
+              let selectOne = document.getElementById(
+                "conversion-currency-one"
+              );
+              let selectTwo = document.getElementById(
+                "conversion-currency-two"
+              );
+              let optOne = document.createElement("option");
+              let optTwo = document.createElement("option");
+              optOne.innerHTML = quote.slice(3);
+              optTwo.innerHTML = quote.slice(3);
+              optOne.setAttribute("rate", json.quotes[quote]);
+              optTwo.setAttribute("rate", json.quotes[quote]);
+              selectOne.append(optOne);
+              selectTwo.append(optTwo);
+              document.getElementById("conversion-currency-one").value = "USD";
+            }
           }
         });
     }
@@ -72,9 +78,13 @@ const currencyAPI = (function() {
                 convertedValue.innerText =
                   `${conversionValue} ${countryOne.slice(3)}` +
                   `  -->  ` +
-                  conversionValue /
-                    json.quotes[countryOne] *
-                    json.quotes[countryTwo] +
+                  Math.round(
+                    conversionValue /
+                      json.quotes[countryOne] *
+                      json.quotes[countryTwo] *
+                      100
+                  ) /
+                    100 +
                   ` ${countryTwo.slice(3)}`;
                 blockHeader.innerHTML = `${countryOne.slice(
                   3
@@ -88,9 +98,8 @@ const currencyAPI = (function() {
         });
     }
     static renderCompareChart() {
-      // let data = [];
-      let currencyLabels = []
-      let currencyData = []
+      let currencyLabels = [];
+      let currencyData = [];
       const baseURL = "http://www.apilayer.net/api/";
       const key = "live?access_key=7f4d02da127d8bf24d661a776e7e392a";
       fetch(`${baseURL}${key}`)
@@ -98,39 +107,33 @@ const currencyAPI = (function() {
         .then(json => {
           for (let quote in json.quotes) {
             let currencyName = quote.slice(3);
-
-            currencyLabels.push(currencyName);
-            currencyData.push(json.quotes[quote])
-
-
-              new Chart(document.getElementById("bar-chart"), {
-              type: 'bar',
-              data: {
-                labels: currencyLabels,
-                datasets: [
-                  {
-                    label: "Population (millions)",
-                    backgroundColor: "#c45850",
-                    data: currencyData
-                  }
-                ]
-              },
-              options: {
-                legend: { display: false },
-                title: {
-                  display: true,
-                  text: 'Currency Levels'
-                }
-              }
-            })
+            if (json.quotes[quote] < 3) {
+              currencyLabels.push(currencyName);
+              currencyData.push(json.quotes[quote]);
+            }
           }
+
+          new Chart(document.getElementById("bar-chart"), {
+            type: "bar",
+            data: {
+              labels: currencyLabels,
+              datasets: [
+                {
+                  label: "Conversion Rate Compared To USD",
+                  backgroundColor: "white",
+                  data: currencyData
+                }
+              ]
+            },
+            options: {
+              legend: { display: true },
+              title: {
+                display: true,
+                text: "Currency Levels"
+              }
+            }
+          });
         });
-
-
-
-      console.log(currencyLabels)
-      console.log(currencyData)
-;
     }
   };
 })();
