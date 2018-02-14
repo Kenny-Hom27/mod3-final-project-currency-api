@@ -1,24 +1,33 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <meta charset="utf-8">
-    <title>Currency Converter</title>
-  </head>
-  <body>
-    <form id="input-form" action="index.html" method="post">
-      Convert: <input type="text" id="currency-amount" placeholder="Enter Amount">
-      <select id='conversion-currency-one' name="Currency to Convert"></select>
-      To: <select id='conversion-currency-two' name="Currency to Convert"></select>
-      <input type="submit" name="submit" value="Convert Currency">
-    </form>
-    <div id='currencies' class="currencies">
-    </div>
-    <script src="currency-api.js">
-    </script>
-    <script src="app.js">
-    </script>
-    <script src="index.js">
-    </script>
-  </body>
+ <head>
+   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+   <meta charset="utf-8">
+   <div class="headerBox">
+     <img src="http://www.svimed.eu/website/wp-content/uploads/2017/02/money-png-25-768x552.png" />
+     <div class="title">
+       Currency Converter
+     </div>
+     <img src="http://www.svimed.eu/website/wp-content/uploads/2017/02/money-png-25-768x552.png" />
+   </div>
+ </head>
+ <body>
+   <form id="input-form" action="index.html" method="post">
+     Convert: <input type="text" id="currency-amount" placeholder="Enter Amount">
+     <select id='conversion-currency-one' name="Currency to Convert" value="USD" ></select>
+     To: <select id='conversion-currency-two' name="Currency to Convert"></select>
+     <input type="submit" name="submit" id="convert-currency" value="Convert Currency">
+   </form>
+   <div id='currencies' class="currencies">
+   </div>
+   <canvas id="bar-chart" width="800" height="450"></canvas>
+   <script src="../node_modules/chart.js/dist/Chart.js"></script>
+   <script src="currency-api.js">
+   </script>
+   <script src="app.js">
+   </script>
+   <script src="index.js">
+   </script>
+ </body>
 </html>

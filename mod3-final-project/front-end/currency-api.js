@@ -17,6 +17,7 @@ const currencyAPI = (function() {
             optTwo.setAttribute("rate", json.quotes[quote]);
             selectOne.append(optOne);
             selectTwo.append(optTwo);
+            document.getElementById("conversion-currency-one").value = "USD";
           }
         });
     }
@@ -85,6 +86,51 @@ const currencyAPI = (function() {
               });
           });
         });
+    }
+    static renderCompareChart() {
+      // let data = [];
+      let currencyLabels = []
+      let currencyData = []
+      const baseURL = "http://www.apilayer.net/api/";
+      const key = "live?access_key=7f4d02da127d8bf24d661a776e7e392a";
+      fetch(`${baseURL}${key}`)
+        .then(res => res.json())
+        .then(json => {
+          for (let quote in json.quotes) {
+            let currencyName = quote.slice(3);
+
+            currencyLabels.push(currencyName);
+            currencyData.push(json.quotes[quote])
+
+
+              new Chart(document.getElementById("bar-chart"), {
+              type: 'bar',
+              data: {
+                labels: currencyLabels,
+                datasets: [
+                  {
+                    label: "Population (millions)",
+                    backgroundColor: "#c45850",
+                    data: currencyData
+                  }
+                ]
+              },
+              options: {
+                legend: { display: false },
+                title: {
+                  display: true,
+                  text: 'Currency Levels'
+                }
+              }
+            })
+          }
+        });
+
+
+
+      console.log(currencyLabels)
+      console.log(currencyData)
+;
     }
   };
 })();
