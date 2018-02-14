@@ -45,6 +45,8 @@ const currencyAPI = (function() {
             let countryOne = "USD" + backendJSON.original_currency;
             let countryTwo = "USD" + backendJSON.conversion_currency;
             let conversionValue = backendJSON.amount_entered;
+            let id = backendJSON.id;
+
             const baseURL = "http://www.apilayer.net/api/";
             const key = "live?access_key=7f4d02da127d8bf24d661a776e7e392a";
             return fetch(`${baseURL}${key}`)
@@ -54,6 +56,17 @@ const currencyAPI = (function() {
                 let blockHeader = document.createElement("h3");
                 let convertedValue = document.createElement("p");
                 let currencyBlock = document.createElement("div");
+
+                let deleteButton = document.createElement("button");
+                deleteButton.innerText = "Delete";
+
+                deleteButton.addEventListener("click", function(e) {
+                  e.target.parentElement.remove();
+                  fetch(`http://localhost:3000/api/v1/currencies/${id}`, {
+                    method: "DELETE"
+                  });
+                });
+
                 currencyBlock.classList.add("currencyBlock");
                 convertedValue.innerText =
                   `${conversionValue} ${countryOne.slice(3)}` +
@@ -67,6 +80,7 @@ const currencyAPI = (function() {
                 )} --> ${countryTwo.slice(3)}`;
                 currencyBlock.append(blockHeader);
                 currencyBlock.append(convertedValue);
+                currencyBlock.append(deleteButton);
                 currencies.append(currencyBlock);
               });
           });
