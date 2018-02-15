@@ -120,6 +120,7 @@ const currencyAPI = (function() {
               datasets: [
                 {
                   label: "Conversion Rate Compared To USD",
+                  fontColor: "black",
                   backgroundColor: "white",
                   data: currencyData
                 }
@@ -127,9 +128,31 @@ const currencyAPI = (function() {
             },
             options: {
               legend: { display: true },
+
               title: {
                 display: true,
-                text: "Currency Levels"
+                text: "Currency Levels",
+                fontColor: "black",
+                fontSize: 50
+              },
+              scales: {
+                yAxes: [
+                  {
+                    ticks: {
+                      beginAtZero: true,
+                      fontColor: "black",
+                      fontSize: 20
+                    }
+                  }
+                ],
+                xAxes: [
+                  {
+                    ticks: {
+                      fontColor: "black",
+                      fontSize: 15
+                    }
+                  }
+                ]
               }
             }
           });

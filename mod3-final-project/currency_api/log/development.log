@@ -4729,3 +4729,312 @@ Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
 >>>>>>> f298f0d2ffe33c06b0e228463013912d901c5334
 
 
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-14 17:25:54 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (3.24ms)
+Completed 200 OK in 29ms (Views: 23.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/v1/currencies" for 127.0.0.1 at 2018-02-14 17:26:32 -0500
+Processing by Api::V1::CurrenciesController#create as */*
+  Parameters: {"original_currency"=>"USD", "conversion_currency"=>"GBP", "amount_entered"=>"400", "currency"=>{"original_currency"=>"USD", "conversion_currency"=>"GBP", "amount_entered"=>"400"}}
+Unpermitted parameter: :currency
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "currencies" ("original_currency", "conversion_currency", "amount_entered", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["original_currency", "USD"], ["conversion_currency", "GBP"], ["amount_entered", 400], ["created_at", "2018-02-14 22:26:32.460771"], ["updated_at", "2018-02-14 22:26:32.460771"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Currency (0.33ms)
+Completed 200 OK in 9ms (Views: 1.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:36:50 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (3.1ms)
+Completed 200 OK in 31ms (Views: 26.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:37:58 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (4.52ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:38:13 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (4.85ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:38:33 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.5ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (4.25ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:38:41 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (6.18ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:39:05 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (5.7ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:39:16 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (6.16ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:39:31 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.5ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (6.22ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:39:38 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.6ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (4.39ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:39:46 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (5.08ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:39:54 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.5ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (5.67ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:40:00 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (5.33ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:46:16 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (3.04ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:46:24 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.5ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (5.83ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:47:19 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (4.39ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:47:38 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (4.83ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:47:46 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (4.29ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:48:22 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (5.11ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:48:51 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (4.49ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:48:57 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (4.87ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:49:10 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (5.11ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:49:19 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (5.29ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:50:15 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (5.94ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:50:42 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.43ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:51:48 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.5ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (4.25ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:51:56 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.6ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (3.54ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:52:10 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (4.81ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:52:43 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (3.41ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:53:12 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.7ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (5.96ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:53:18 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.97ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:53:22 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (3.85ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:53:28 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.9ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (5.84ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:53:35 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (4.49ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:53:41 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (4.47ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:58:26 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (2.99ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/currencies" for 127.0.0.1 at 2018-02-15 11:58:32 -0500
+Processing by Api::V1::CurrenciesController#index as */*
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT "currencies".* FROM "currencies"[0m
+No serializer found for resource: #<Currency id: 15, original_currency: "USD", conversion_currency: "BAM", amount_entered: 52321, created_at: "2018-02-14 16:12:26", updated_at: "2018-02-14 16:12:26">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Currency::ActiveRecord_Relation (5.24ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.4ms)
+
+
