@@ -74,6 +74,20 @@ const currencyAPI = (function() {
                   });
                 });
 
+                let comparisonChart = document.getElementById("divChart");
+                comparisonChart.style.opacity = 0;
+                let chartButton = document.createElement("button");
+                chartButton.innerText = "Comparison Chart";
+
+                chartButton.addEventListener("click", function(e) {
+                  comparisonChart.style.opacity = 1;
+                  let parentDiv = e.target.parentElement;
+                  let parentText = parentDiv.innerText.slice(0, 11);
+                  let currencyOne = "USD" + parentText.slice(0, 3);
+                  let currencyTwo = "USD" + parentText.slice(8);
+                  currencyAPI.renderDivChart(currencyOne, currencyTwo);
+                });
+
                 currencyBlock.classList.add("currencyBlock");
                 convertedValue.innerText =
                   `${conversionValue} ${countryOne.slice(3)}` +
@@ -92,6 +106,7 @@ const currencyAPI = (function() {
                 currencyBlock.append(blockHeader);
                 currencyBlock.append(convertedValue);
                 currencyBlock.append(deleteButton);
+                currencyBlock.append(chartButton);
                 currencies.append(currencyBlock);
               });
           });
@@ -120,7 +135,6 @@ const currencyAPI = (function() {
               datasets: [
                 {
                   label: "Conversion Rate Compared To USD",
-                  fontColor: "black",
                   backgroundColor: "white",
                   data: currencyData
                 }
@@ -128,7 +142,6 @@ const currencyAPI = (function() {
             },
             options: {
               legend: { display: true },
-
               title: {
                 display: true,
                 text: "Currency Levels",
@@ -142,6 +155,78 @@ const currencyAPI = (function() {
                       beginAtZero: true,
                       fontColor: "black",
                       fontSize: 20
+                    }
+                  }
+                ],
+                xAxes: [
+                  {
+                    ticks: {
+                      fontColor: "black",
+                      fontSize: 15
+                    }
+                  }
+                ]
+              }
+            }
+          });
+        });
+    }
+
+    static renderDivChart(currencyOne, currencyTwo) {
+      let relDivChart = document.createElement("canvas");
+      relDivChart.id = "rel-bar-chart";
+      relDivChart.width = 50;
+      relDivChart.height = 50;
+      let relDiv = document.getElementById("divChart");
+      relDiv.innerText = "";
+      relDiv.append(relDivChart);
+
+      const baseURL = "http://www.apilayer.net/api/";
+      const key = "live?access_key=7f4d02da127d8bf24d661a776e7e392a";
+      return fetch(`${baseURL}${key}`)
+        .then(res => res.json())
+        .then(json => {
+          let relCurrencyOne = "";
+          let relValueOne;
+          let relCurrencyTwo = "";
+          let relValueTwo;
+          for (let element in json.quotes) {
+            if (element === currencyOne) {
+              relCurrencyOne = element;
+              relValueOne = json.quotes[element];
+            } else if (element === currencyTwo) {
+              relCurrencyTwo = element;
+              relValueTwo = json.quotes[element];
+            }
+          }
+
+          new Chart(document.getElementById("rel-bar-chart"), {
+            type: "bar",
+            data: {
+              labels: [relCurrencyOne, relCurrencyTwo],
+              datasets: [
+                {
+                  label: "Conversion Rate",
+                  backgroundColor: "white",
+                  data: [relValueOne, relValueTwo]
+                }
+              ]
+            },
+            options: {
+              legend: { display: true },
+              title: {
+                display: true,
+                text: "Conversion Rate",
+                fontColor: "black",
+                fontSize: 20
+              },
+              scales: {
+                yAxes: [
+                  {
+                    ticks: {
+                      beginAtZero: true,
+                      fontColor: "black",
+                      fontSize: 10
                     }
                   }
                 ],

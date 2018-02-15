@@ -18,7 +18,7 @@ div.currencyBlock {
   border-radius: 5px;
   background: linear-gradient(to bottom right, green, yellow);
   font-weight: bold;
-  height: 200px;
+  height: 220px;
   width: 200px;
 }
 
@@ -102,4 +102,12 @@ button:hover {
   background: linear-gradient(to bottom right, green, yellow);
   opacity: 0.85;
   border-radius: 15px;
+}
+
+div.divChart {
+  background: linear-gradient(to bottom right, green, yellow);
+  width: 500px;
+  height: 500px;
+  border-radius: 15px;
+  display: flex;
 }
